@@ -35,7 +35,12 @@ export default class TimeSlot {
         return new TimeSlot(hour, minute)
     }
 
-    toString() {
-        return `${this.hour}:${this.minute}`
+    toString(): string {
+				const timeFormatter = (n: number) => n < 10 ? `0${n.toString()}` : n.toString()
+        return `${timeFormatter(this.hour)}:${timeFormatter(this.minute)}`
     }
+
+		get valid(): boolean {
+			return this.hour >= 0 && this.minute >= 0
+		}
 }
