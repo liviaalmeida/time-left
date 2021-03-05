@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
-import './assets/scss/reset.scss'
 import Time from './ds/Time.vue'
 
 Vue.config.productionTip = false
